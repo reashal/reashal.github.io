@@ -59,13 +59,6 @@ ul,li,a{
     width: 1;
     background-color: white;
 }
-.beian{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    bottom:3%;
-}
 a,p{
     color: white;
     font-size:16px;
