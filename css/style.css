@@ -1,0 +1,79 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right,#ec6fa3,#2f4af2);
+}
+.box{
+    position: absolute;
+    height : 100%;
+    width: 100%;
+    /* box铺满 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 为内部对齐做准备 */
+}
+.info{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+}
+.info #ava{
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #1eccef;
+    margin-bottom: 1px;
+    margin: auto;
+    border-radius: 100px;
+}/*
+.info #ava:hover{
+    background-image: none;
+}*/
+.info #reashal{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+}
+ul,li,a{
+    flex-direction: row;
+    justify-content: center;
+    font-size: 3vh;
+    list-style: none;
+    float: left;
+    padding: 1vh;
+    margin: auto;
+    color: #ec6fa3;
+}
+.fgx{
+    height: 1px;
+    width: 1;
+    background-color: white;
+}
+.beian{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom:3%;
+}
+a,p{
+    color: white;
+    font-size:16px;
+    text-decoration: none;
+}
+button{
+    background-color: none;
+}
+#music{
+    display: none;
+}
