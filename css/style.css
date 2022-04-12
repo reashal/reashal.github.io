@@ -1,72 +1,84 @@
-body{
+html,
+body {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right,#ec6fa3,#2f4af2);
+    margin: 0;
+    padding: 0;
 }
-.box{
-    position: absolute;
-    height : 100%;
+
+body {
+    background-image: linear-gradient(to right, #ec6fa3, #2f4af2);
+}
+
+.box {
+    position: fixed;
+    height: 100%;
     width: 100%;
-    /* box铺满 */
+    /* box铺满屏幕,需要html和body取消边距 */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 为内部对齐做准备 */
+    /* 盒子内部水平垂直居中对齐 */
 }
-.info{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh;
+
+.about {
+    width: 70%;
+    max-width: 750px;
+    background-color: rgba(219, 245, 245, 0.1);
+    padding: 1%;
 }
-.info #ava{
+
+#ava {
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border: 2px solid #1eccef;
-    margin-bottom: 1px;
     margin: auto;
+    margin-top: 3%;
     border-radius: 100px;
-}/*
-.info #ava:hover{
-    background-image: none;
-}*/
-.info #reashal{
-    color:rgb(255, 255, 255);
+}
+
+#ava:hover {
+    content: url("https://images.reashal.com/resources/avator/dyAva.gif");
+}
+
+#reashal {
+    color: rgb(255, 255, 255);
     text-align: center;
     margin: auto;
 }
-.icon{
-    display: flex;
-    justify-content: center;
-}
-ul,li,a{
-    flex-direction: row;
-    justify-content: center;
-    font-size: 3vh;
-    list-style: none;
-    float: left;
-    padding: 1vh;
-    margin: auto;
-    color: #ec6fa3;
-}
-.fgx{
+
+.fgx {
     height: 1px;
-    width: 1;
     background-color: white;
 }
-a,p{
+
+ul,
+li {
+    display: inline-block;
+    list-style: none;
+    padding: 1vh;
+    margin: auto;
+}
+
+i:hover {
+    color: #ec6fa3;
+}
+
+.footer {
+    bottom: 3%;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+a,
+p {
     color: white;
-    font-size:16px;
+    font-size: 16px;
     text-decoration: none;
 }
-button{
-    background-color: none;
-}
-#music{
+
+#music {
     display: none;
 }
