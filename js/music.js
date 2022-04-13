@@ -11,5 +11,11 @@ x.onclick = function () {
 }
 //播放音乐旋转头像
 music.onplay = function () {
-  x.src = 'https://images.reashal.com/resources/avator/dyAva.gif';
+  x.src = '../images/dyAva.gif';
+  x.title = '点击暂停背景音乐';
+}
+//暂停音乐停止旋转头像
+music.onpause = function () {
+  x.src = '../images/reashal.png';
+  x.title = '点击开启背景音乐';
 }

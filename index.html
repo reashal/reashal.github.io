@@ -9,16 +9,16 @@
     <title>你听|睿屿青衫</title>
     <meta name="author" content="reashal">
     <meta name="description" content="不惦来路,轻装且行">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="https://images.reashal.com/about/avatar.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/reashal.png">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <script src="./js/music.js" async="async"></script>
+    <script src="js/music.js" async="async"></script>
 </head>
 
 <body>
     <div class="box">
         <div class="about" id="bor">
-            <img src="https://images.reashal.com/resources/avator/reashal.png" id="ava" title="点我有惊喜哦" alt="Avator">
+            <img src="images/reashal.png" id="ava" title="点我有惊喜哦" alt="头像/音乐控件">
             <div id="reashal">
                 <h2><b>睿屿青衫</h2>
                 <p>不惦来路,轻装且行</p>
@@ -31,7 +31,8 @@
                                     class="fa fa-pencil fa-lg"></i></a></li>
                         <li><a href="http://wpa.qq.com/msgrd?v=3&uin=532266666&site=ivrpano.com&menu=yes" title="QQ"
                                 target="blank"><i class="fa fa-qq fa-lg"></i></a></li>
-                        <li><a href="mailto:88811@88.com" title="Mail" target="blank"><i class="fa fa-envelope fa-lg"></i></a>
+                        <li><a href="mailto:88811@88.com" title="Mail" target="blank"><i
+                                    class="fa fa-envelope fa-lg"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -40,12 +41,17 @@
     </div>
     <div class="footer">
         <a target="_blank" href="https://beian.miit.gov.cn/">
-            <p></p>
+            <p>鲁ICP备18004237号</p>
         </a>
     </div>
     <div>
+        <!--鼠标点击泡泡特效-->
+        <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+        <script type="text/javascript" src="js/djtx.js"></script>
+    </div>
+    <div>
         <audio controls id="music" loop>
-            <source src="https://images.reashal.com/resources/music/LettingGo.mp3" type="audio/mpeg">
+            <source src="music/LettingGo.mp3" type="audio/mpeg">
         </audio>
     </div>
 
