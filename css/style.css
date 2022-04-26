@@ -4,6 +4,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+    /* 防止盒子塌陷 */
 }
 
 body {
@@ -11,7 +13,7 @@ body {
 }
 
 .box {
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 100%;
     /* box铺满屏幕,需要html和body取消边距 */
@@ -39,13 +41,19 @@ body {
 }
 
 #ava:hover {
-    content: url("../images/dyAva.gif");
+    content: url("https://images.reashal.com/resources/avator/dyAva.gif");
 }
 
-#reashal {
+#reashal,
+#aboutme,
+#ctr {
     color: rgb(255, 255, 255);
     text-align: center;
     margin: auto;
+}
+
+#aboutme {
+    display: none;
 }
 
 .fgx {
@@ -53,12 +61,16 @@ body {
     background-color: white;
 }
 
-ul,
-li {
+#ctr ul,
+#ctr li {
     display: inline-block;
-    list-style: none;
-    padding: 1vh;
+    list-style-type: none;
     margin: auto;
+    padding: 5px;
+}
+
+.iconfont {
+    font-size: 22px !important;
 }
 
 i:hover {
@@ -66,23 +78,24 @@ i:hover {
 }
 
 .footer {
-    bottom: 3%;
+    bottom: 0;
     width: 100%;
-    position: fixed;
+    position: absolute;
     text-align: center;
+    background-color: #e1e5eb;
+    opacity: 0.3;
+
 }
 
-a,
-p {
+.footer p {
+    color: #000000;
+}
+
+ul a {
     color: white;
-    font-size: 16px;
     text-decoration: none;
 }
 
 #music {
     display: none;
-}
-
-.iconfont{
-    font-size: 22px !important;
 }
