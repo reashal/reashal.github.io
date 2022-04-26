@@ -1,11 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html,
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
     position: relative;
-    /* 防止盒子塌陷 */
+    /* 子绝父相 */
+    overflow: hidden;
+    /* 防止撑开盒子 */
 }
 
 body {
@@ -21,27 +26,97 @@ body {
     align-items: center;
     justify-content: center;
     /* 盒子内部水平垂直居中对齐 */
+    /* margin: auto; */
 }
 
-.about {
+.box .about {
+    position: relative;
     width: 70%;
     max-width: 750px;
     background-color: rgba(219, 245, 245, 0.1);
     padding: 1%;
+    overflow: hidden;
 }
 
-#ava {
-    display: block;
+/* 调整动画的分割线1 */
+.box .imgbox {
+    position: relative;
     width: 100px;
     height: 100px;
-    border: 2px solid #1eccef;
+    background-color: rgb(236, 111, 163, .6);
+    border-radius: 50%;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 5px;
+}
+
+.left,
+.right {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.right {
+    right: 0;
+}
+
+.left .leftCircle,
+.right .rightCircle {
+    width: 50px;
+    height: 100px;
+    background-color: rgb(255, 255, 255, .4);
+}
+
+.left .leftCircle {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transform-origin: right center;
+}
+
+.right .rightCircle {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform-origin: left center;
+}
+
+.imgbox .bgAva {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+}
+
+/* 调整动画的分割线2 */
+
+.box #ava {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    margin: auto;
     border-radius: 100px;
 }
 
 #ava:hover {
-    content: url("https://images.reashal.com/resources/avator/dyAva.gif");
+    cursor: pointer;
+    content: url("../images/reashal.gif");
+}
+
+#btn {
+    position: absolute;
+    display: none;
+    margin: auto;
+    z-index: 3;
+    left: 38px;
+    bottom: -4px;
+    font-size: 16px !important;
+    color: rgb(39, 244, 220);
 }
 
 #reashal,
@@ -49,7 +124,9 @@ body {
 #ctr {
     color: rgb(255, 255, 255);
     text-align: center;
-    margin: auto;
+    line-height: 33px;
+    padding: 10px;
+    font-weight: bold;
 }
 
 #aboutme {
@@ -57,15 +134,21 @@ body {
 }
 
 .fgx {
-    height: 1px;
-    background-color: white;
+    height: 2px;
+    background-color: rgb(255, 255, 255, .7);
 }
 
-#ctr ul,
-#ctr li {
+.icon {
+    margin-bottom: -12px;
+}
+
+#abo {
+    cursor: pointer;
+}
+
+.icon li {
     display: inline-block;
     list-style-type: none;
-    margin: auto;
     padding: 5px;
 }
 
@@ -83,15 +166,19 @@ i:hover {
     position: absolute;
     text-align: center;
     background-color: #e1e5eb;
-    opacity: 0.3;
+    opacity: 0.4;
+    padding: 6px;
 
 }
 
 .footer p {
     color: #000000;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-ul a {
+ul a,
+.footer a {
     color: white;
     text-decoration: none;
 }
